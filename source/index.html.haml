@@ -1,8 +1,53 @@
----
-title: Welcome to Middleman
----
+%p<
+  Hola hola popopopo
+  Chau chau pupupupu
 
-.welcome
-  %h1 Middleman is Watching
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+%p> Papas Fritas
+
+%p= lorem.paragraph
+%p= lorem.sentences 5
+%p= lorem.date
+%p= lorem.name
+%p= lorem.email
+
+%p
+  = pluralize(2, "bombero")
+
+= simple_format("hola\nmundo")
+
+%p
+  = highlight(lorem.paragraph, "dolor")
+
+%p= lorem.image('300x400')
+
+%p.fu
+  Huevo frito
+  %a.frito.sarasa#huevo(href="http://www.quov.is") sin sal
+  es muy rico
+
+<p>hola</p>
+
+%ul#espacioso
+  %li> A
+  %li.lala> B
+  %li> C
+
+%ul#mamushka
+  %li
+    Hola
+    %ul
+      %li
+        %a(href="#") hola
+
+#caja
+  - 32.times do |i|
+    .cajita= i + 1
+
+%ul
+  - %w( milhouse pablo pedro asoi jdioaj sojao sdioj asd ).each do |nombre|
+    %li= nombre
+
+%p&= "<script>alert('todos putos')</script>"
+%p= escape_html("<script>alert('todos putos')</script>")
+
+%p &lt;script&gt;

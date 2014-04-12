@@ -1,0 +1,68 @@
+@import compass
+
+body
+  :font-family helvetica, arial, sans-serif
+  :background #66EEAA
+
+p
+  :line-height 1.5em
+
+#wrapper
+  :width 960px
+  :margin 0 auto
+
+#espacioso
+  li
+    :display inline-block
+    :padding 5px
+    :background pink
+    
+    &:hover
+      :background black
+      :color white
+    
+    &.lala
+      :background red
+    
+    li > a
+
+p a
+p span a
+
+#mamushka li
+#mamushka > li
+
+#mamushka
+  li
+    :border 1px solid red
+
+#caja
+  $cw: 40px
+  $cm: 5px
+  :background red
+  :padding $cm
+  :width $cw * 4 + $cm * 3
+  :overflow hidden
+  
+  .cajita
+    :float left
+    :margin
+      :right $cm
+      :bottom $cm
+    :width $cw
+    :height $cw
+    :background yellow
+
+    &:nth-child(4n)
+      :margin-right 0
+      
+    &:nth-child(8n+12)
+      :background green
+      
+      &:hover
+        :background pink
+        
+    &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)
+      :margin-bottom 0
+
+// <ul><li><ul><li><a href="">hola</a></li></ul></li></ul>
